@@ -1,14 +1,13 @@
 FreeCodeCamp API Basejump: URL Shortener Microservice
 User stories:
 
-I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
-When I visit that shortened URL, it will redirect me to my original link.
-Example creation usage:
-https://url-shortener-stolenng-stolenng.c9users.io/new/https://www.google.com
-https://url-shortener-stolenng-stolenng.c9users.io/new/http://foo.com:80
-Example creation output
-{ "original_url":"http://foo.com:80", "short_url":https://url-shortener-stolenng-stolenng.c9users.io/8170" }
-Usage:
-https://url-shortener-stolenng-stolenng.c9users.io/2871
-Will redirect to:
-https://www.google.com/
+I can pass a URL as a parameter and I will receive a shortened URL in the JSON response. <br />
+When I visit that shortened URL, it will redirect me to my original link. <br />
+Example creation usage: <br />
+https://url-shortener-stolenng-stolenng.c9users.io/new/https://www.google.com <br />
+https://url-shortener-stolenng-stolenng.c9users.io/new/http://foo.com:80 <br />
+Example creation output <br />
+{ "original_url":"http://foo.com:80", "short_url":http://goo.gl/fbsS" } <br />
+
+Will redirect to: <br /> 
+https://www.google.com/ <br />
