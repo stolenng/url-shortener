@@ -8,7 +8,6 @@ var session = require('express-session');
 
 var app = express();
 require('dotenv').load();
-require('./app/config/passport')(passport);
 
 mongoose.connect(process.env.MONGO_URI);
 
@@ -22,10 +21,12 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+routes(app);
 
-routes(app, passport);
+app.use(function(req, res) {
+    res.send({ error : "Please enter correct Url Format" });
+});
+
 
 var port = process.env.PORT || 8080;
 app.listen(port,  function () {
