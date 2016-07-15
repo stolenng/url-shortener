@@ -8,7 +8,7 @@ require('dotenv').load();
 
 
 
-
+var fuckthisshit = "fuck";
 
 module.exports = function (app, googl) {
 	

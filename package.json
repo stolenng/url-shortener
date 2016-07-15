@@ -20,5 +20,8 @@
     "express-session": "^1.11.3",
     "mongoose": "^4.1.0",
     "goo.gl": "^0.1.4"
+  },
+  "engines": {
+    "node": "4.4.5"
   }
 }
