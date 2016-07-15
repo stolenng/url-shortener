@@ -17,7 +17,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 routes(app);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 5000;
 
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
