@@ -5,12 +5,15 @@ var routes = require('./app/routes/index.js');
 var mongoose = require('mongoose');
 var googl = require('goo.gl');
 
+
+require('dotenv').load();
+
+
 var google_key = process.env.GOOGLE_KEY;
 googl.setKey(google_key);
 
 var app = express();
 
-require('dotenv').load({silent : true});
 
 mongoose.connect(process.env.MONGO_URI);
 
