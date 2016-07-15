@@ -1,7 +1,6 @@
 {
-  "name": "clementinejs-fcc",
-  "version": "1.0.1",
-  "description": "The elegant and lightweight boilerplate for full stack JavaScript.",
+  "name": "url-shortener-stolenng",
+  "description": "Url Shortener",
   "main": "server.js",
   "keywords": [
     "MongoDB",

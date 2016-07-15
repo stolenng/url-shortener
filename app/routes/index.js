@@ -2,17 +2,15 @@
 
 var path = process.cwd();
 var UrlShortener = require(path + '/app/models/UrlShortener.js');
-var googl = require('goo.gl');
 
 require('dotenv').load();
 
 
-var google_key = process.env.GOOGLE_KEY;
-googl.setKey(google_key);
 
 
 
-module.exports = function (app) {
+
+module.exports = function (app, googl) {
 	
 
 	app.route('/new/http(s)?://:address').get(function (req, res) {

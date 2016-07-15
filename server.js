@@ -3,6 +3,10 @@
 var express = require('express');
 var routes = require('./app/routes/index.js');
 var mongoose = require('mongoose');
+var googl = require('goo.gl');
+
+var google_key = process.env.GOOGLE_KEY;
+googl.setKey(google_key);
 
 var app = express();
 
@@ -15,9 +19,9 @@ app.use('/public', express.static(process.cwd() + '/public'));
 //app.use('/common', express.static(process.cwd() + '/app/common'));
 
 
-routes(app);
+routes(app, googl);
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 
 app.listen(port,  function () {
 	console.log('Node.js listening on port ' + port + '...');
