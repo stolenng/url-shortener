@@ -4,7 +4,11 @@ var path = process.cwd();
 var UrlShortener = require(path + '/app/models/UrlShortener.js');
 var googl = require('goo.gl');
 
-googl.setKey('AIzaSyDV3tXSaDfwIriinq2zLqlisN0hm0tSj_c');
+require('dotenv').load();
+
+
+var google_key = process.env.GOOGLE_KEY;
+googl.setKey(google_key);
 
 
 
@@ -29,8 +33,15 @@ module.exports = function (app) {
 
 
 	app.route('/new').get(function (req, res) {
-			res.sendFile(path + '/public/index.html');
+		res.sendFile(path + '/public/index.html');
 	});
 
+	app.route('/').get(function (req, res) {
+		res.sendFile(path + '/public/index.html');
+	});
 	
+	app.use(function(req, res) {
+		res.send({ error : "Please enter correct Url Format" });
+	});
+
 };
