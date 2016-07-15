@@ -3,12 +3,7 @@
 var path = process.cwd();
 var UrlShortener = require(path + '/app/models/UrlShortener.js');
 
-require('dotenv').load();
 
-
-
-
-var fuckthisshit = "fuck";
 
 module.exports = function (app, googl) {
 	
